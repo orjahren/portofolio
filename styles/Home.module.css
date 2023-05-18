@@ -33,7 +33,6 @@
   text-align: center;
 }
 
-
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
@@ -88,4 +87,36 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.header,
+.footer {
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  top: 0;
+  display: flex;
+  justify-content: right;
+}
+
+.footer {
+  bottom: 0;
+}
+
+.waveDiv {
+  #hand {
+    font-size: 150px;
+  }
+}
+.waveDiv,
+#hand {
+  font-size: 150px;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
 }
