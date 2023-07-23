@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a {
+  text-decoration: underline blue;
+  padding-bottom: 5px;
+  &:hover {
+    text-decoration: dashed underline blue;
+  }
+}

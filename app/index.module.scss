@@ -1,0 +1,16 @@
+.mainContent {
+  background-color: green;
+  justify-content: space-evenly;
+  display: flex;
+  width: 33%;
+  align-self: center;
+  margin: auto;
+  margin-top: 30%;
+  a {
+    text-decoration: underline blue;
+    padding-bottom: 5px;
+    &:hover {
+      text-decoration: dashed underline blue;
+    }
+  }
+}
