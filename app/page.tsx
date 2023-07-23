@@ -15,7 +15,7 @@ const MainContent = () => {
 
   return (
     <div className={style.mainContentWrapper}>
-      <div style={{ width: "33%", backgroundColor: "#ecebe4" }}>
+      <div className={style.contentDiv}>
         <div>
           <div className={style.textDiv}>
             <h1>Oliver Jahren</h1>
@@ -42,7 +42,7 @@ const MainContent = () => {
             </div>
           </div>
         </div>
-        <div className={style.mainContent}>
+        <div className={style.photoAndLinks}>
           <div>
             <div className={style.personalDiv}>
               <div>

@@ -1,41 +1,7 @@
-.mainContent {
+.photoAndLinks {
   flex-direction: row;
   justify-content: space-evenly;
   display: flex;
-}
-
-.personalDiv {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .profilePictureDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  display: flex;
-  flex-direction: row;
-}
-
-.linkDiv {
-  border-left: 1px solid #1c1c1c;
-  padding: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin: 1rem;
-}
-
-.textDiv {
-  h1 {
-    font-size: 2rem;
-    padding: 1rem;
-    text-align: center;
-  }
-  .contentText {
-    p {
-      margin: 1rem;
-    }
-  }
 }
 
 .mainContentWrapper {
@@ -45,9 +11,43 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  &:first-child {
+
+  .contentDiv {
     background-color: #ecebe4;
-    width: 33%;
-    color: green;
+    width: 650px;
+
+    .textDiv {
+      h1 {
+        font-size: 2rem;
+        padding: 1rem;
+        text-align: center;
+      }
+      .contentText {
+        p {
+          margin: 1rem;
+        }
+      }
+    }
+
+    .personalDiv {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .profilePictureDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      display: flex;
+      flex-direction: row;
+    }
+    .linkDiv {
+      border-left: 1px solid #1c1c1c;
+      padding: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin: 1rem;
+    }
   }
 }
