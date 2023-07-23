@@ -11,14 +11,9 @@ footer {
   div {
     background-color: #eef0f2;
   }
-  color: red;
-  * {
-    color: orange;
-  }
   width: 100%;
   position: absolute;
   padding: 1em;
-  border: 1px solid #eef0f2;
 }
 
 a {
