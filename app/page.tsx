@@ -17,7 +17,10 @@ const MainContent = () => {
       <div className={style.contentDiv}>
         <div>
           <div className={style.textDiv}>
-            <h1>Oliver Jahren</h1>
+            <div>
+              <h1>Oliver Jahren</h1>
+              <p className={style.email}>oliverrj@ifi.uio.no</p>
+            </div>
             <div className={style.contentText}>
               <p>
                 I am studiyng for a{" "}
