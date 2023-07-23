@@ -2,8 +2,7 @@ import style from "./header.module.scss";
 
 const Header = () => (
   <header className={style.header}>
-    <h1>Lo headro mia</h1>
-    <p>heeeead</p>
+    <h2>Oliver Jahren's personal website</h2>
   </header>
 );
 

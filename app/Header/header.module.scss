@@ -1,7 +1,10 @@
 .header {
   width: 100%;
-  background-color: purple;
   top: 0;
   display: flex;
   justify-content: space-evenly;
+  h2 {
+    font-size: 2rem;
+    padding: 0.2rem;
+  }
 }
