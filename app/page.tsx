@@ -7,9 +7,9 @@ import ProfilePicture from "/public/oliver_jahren.png";
 
 const MainContent = () => {
   const linkPairs: ReadonlyArray<[string, string]> = [
+    ["Github", "https://github.com/orjahren"],
     ["LinkedIn", "https://no.linkedin.com/in/oliver-jahren"],
     ["Kattis", "https://open.kattis.com/users/oliverrj"],
-    ["Github", "https://github.com/orjahren"],
   ];
 
   return (
