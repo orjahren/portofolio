@@ -1,10 +1,10 @@
 import style from "./header.module.scss";
 
 const Header = () => (
-  <div className={style.header}>
+  <header className={style.header}>
     <h1>Lo headro mia</h1>
     <p>heeeead</p>
-  </div>
+  </header>
 );
 
 export default Header;
