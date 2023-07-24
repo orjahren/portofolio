@@ -38,8 +38,9 @@ const MainContent = () => {
                 <a href="https://nettskjema.no/?lang=en">Nettskjema.no</a>, and
                 as a teaching assistant in{" "}
                 <a href="https://www.uio.no/studier/emner/matnat/ifi/IN4120/index-eng.html">
-                  search techonology
+                  search technology
                 </a>
+                .
               </p>
             </div>
           </div>
