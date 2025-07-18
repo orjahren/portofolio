@@ -6,7 +6,7 @@ import Image from "next/image";
 const IndexContent = () => {
   const linkPairs: ReadonlyArray<[string, string]> = [
     ["Github", "https://github.com/orjahren"],
-    ["LinkedIn", "https://no.linkedin.com/in/oliver-jahren"],
+    ["LinkedIn", "https://www.linkedin.com/in/orjahren"],
     ["Kattis", "https://open.kattis.com/users/oliverrj"],
   ];
 
