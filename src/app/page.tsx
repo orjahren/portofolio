@@ -1,5 +1,5 @@
-import Footer from "@/app/Footer";
-import Header from "@/app/Header";
+import Footer from "@/src/app/Footer";
+import Header from "@/src/app/Header";
 import Image from "next/image";
 
 import style from "./index.module.scss";
