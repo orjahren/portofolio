@@ -1,4 +1,7 @@
+@import "@/src/styles/variables";
+
 .header {
+  color: $color-text;
   width: 100%;
   position: relative;
   display: flex;

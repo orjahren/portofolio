@@ -1,3 +1,5 @@
+@import "@/src/styles/variables";
+
 .photoAndLinks {
   flex-direction: row;
   justify-content: space-evenly;
@@ -9,10 +11,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-bg;
+  color: $color-text;
 
   .contentDiv {
-    background-color: #ecebe4;
+    background-color: $color-content-bg;
     width: 650px;
+    border-left: 1px solid $color-border;
 
     .textDiv {
       h1,
@@ -55,6 +60,13 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
       margin: 1rem;
+    }
+  }
+  a {
+    color: $color-link;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: dashed underline;
     }
   }
 }
