@@ -54,6 +54,7 @@ const MainContent = () => {
                     src={ProfilePicture}
                     alt="Picture of the author"
                     width={300}
+                    placeholder="blur"
                   />
                   <p style={{ fontSize: "1rem", marginBottom: 10 }}>
                     <i>All rights reserved</i>
