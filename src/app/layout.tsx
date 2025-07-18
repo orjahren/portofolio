@@ -15,7 +15,6 @@ export default ({ children }: { children: React.ReactNode }) => (
       <meta name="viewport" content="initial-scale=1, width=device-width" />
       <meta charSet="UTF-8" />
     </head>
-
     <body className={inter.className}>{children}</body>
   </html>
 );
