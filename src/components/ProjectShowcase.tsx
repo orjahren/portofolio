@@ -1,6 +1,21 @@
+import Card from "@mui/material/Card";
+
 import style from "./index.module.scss";
 
-import ProjectCard from "@/src/components/projects/ProjectCard";
+const ProjectCard = ({ project }: { project: ProjectType }) => (
+  <Card>
+    <h3>{project.title}</h3>
+    <p>{project.description}</p>
+    <a
+      href={project.localLink || project.externalLink}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+  </Card>
+);
+
 const ProjectShowcase = () => {
   const projects: ProjectType[] = [
     {
