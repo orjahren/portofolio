@@ -15,17 +15,17 @@ footer {
 }
 
 a {
-  text-decoration: underline blue;
+  text-decoration: underline $color-link;
   padding-bottom: 5px;
   &:hover {
-    text-decoration: dashed underline blue;
+    text-decoration: dashed underline $color-link;
   }
 }
 
 p,
 h1,
 h2 {
-  color: #1c1c1c;
+  color: $color-text;
 }
 
 p,

@@ -55,7 +55,7 @@
       flex-direction: row;
     }
     .linkDiv {
-      border-left: 1px solid #1c1c1c;
+      border-left: 1px solid $color-border;
       padding: 1rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
@@ -72,7 +72,7 @@
 }
 
 .projectShowcase {
-  background-color: $color-content-bg;
+  background-color: $color-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
