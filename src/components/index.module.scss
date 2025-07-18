@@ -78,8 +78,35 @@
   align-items: center;
   margin-top: 2rem;
   row-gap: 1rem;
-  * {
+  .projectCard {
     margin: 0.2rem;
     padding: 0.5rem;
   }
+  .projectCard:hover {
+    cursor: pointer;
+  }
+}
+
+.modalBox {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  max-width: 400px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.modalDescription {
+  margin-top: 16px;
+  font-size: 1rem;
 }
