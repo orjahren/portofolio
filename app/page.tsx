@@ -65,7 +65,7 @@ const MainContent = () => {
                 <div className={style.linkDiv}>
                   <ul>
                     {linkPairs.map(([name, url]) => (
-                      <li>
+                      <li key={url}>
                         <a href={url}>{name}</a>
                       </li>
                     ))}
