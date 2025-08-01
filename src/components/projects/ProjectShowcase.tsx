@@ -1,62 +1,43 @@
 "use client";
 import Card from "@mui/material/Card";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Button, Stack } from "@mui/material";
+import Link from "next/link";
 
 import style from "./projects.module.scss";
-import { useState } from "react";
-import Modal from "@mui/material/Modal";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 
 import projects from "@/src/data/projects";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   return (
-    <>
-      <Card onClick={handleOpen} className={style.projectCard}>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </Card>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box className={style.modalBox}>
-          <Typography
-            id="modal-modal-title"
-            variant="h6"
-            component="h2"
-            className={style.modalTitle}
+    <Card className={style.projectCard}>
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
+        <Link href={project.localLink} passHref>
+          <Button
+            variant="contained"
+            endIcon={<ArrowForwardIcon />}
+            component="p"
           >
-            {project.title}
-          </Typography>
-          <Typography
-            id="modal-modal-description"
-            className={style.modalDescription}
-          >
-            {project.blurb}
-            <br />
-          </Typography>
-          <div className={style.modalLinks}>
-            <a href={project.localLink} rel="noopener noreferrer">
-              Read more
-            </a>
-            <a
-              href={project.externalLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            Read more
+          </Button>
+        </Link>
+        {project.externalLink && (
+          // TODO: Burde skille på "external url" og "github url"?
+          <Link href={project.externalLink} passHref>
+            <Button
+              variant="contained"
+              endIcon={<OpenInNewIcon />}
+              component="p"
             >
               Go to project
-            </a>
-          </div>
-        </Box>
-      </Modal>
-    </>
+            </Button>
+          </Link>
+        )}
+      </Stack>
+    </Card>
   );
 };
 
