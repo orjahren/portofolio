@@ -1,6 +1,8 @@
+import Header from "@/src/app/Header";
+import Footer from "@/src/app/Footer";
 import "./globals.scss";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,12 +11,18 @@ export const metadata: Metadata = {
   description: "Oliver Jahren's personal website",
 };
 
-export default ({ children }: { children: React.ReactNode }) => (
-  <html lang="en">
-    <head>
-      <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <meta charSet="UTF-8" />
-    </head>
-    <body className={inter.className}>{children}</body>
-  </html>
-);
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        <main>{children}</main>
+        <Footer githubRepoUrl={"https://github.com/orjahren/portofolio"} />
+      </body>
+    </html>
+  );
+}

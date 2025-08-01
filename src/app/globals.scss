@@ -2,15 +2,14 @@
 
 body {
   background-color: $color-bg;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
 footer {
-  div {
-    background-color: #eef0f2;
-  }
   width: 100%;
-  position: absolute;
   padding: 1em;
 }
 
@@ -31,4 +30,13 @@ h2 {
 p,
 a {
   font-size: 1.2rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  width: 100%;
+  flex-shrink: 0;
 }
