@@ -86,18 +86,29 @@ const IndexContent = () => (
             alignItems: "center",
           }}
         >
-          <Avatar
-            sx={{ width: 180, height: 180, mb: 2 }}
-            alt="Picture of the author"
+          <Box
+            sx={{
+              width: 180,
+              height: 180,
+              mb: 2,
+              position: "relative",
+              borderRadius: "50%",
+              overflow: "hidden",
+              boxShadow: 3,
+            }}
           >
             <Image
               src={ProfilePicture}
               alt="Picture of the author"
-              width={180}
-              height={180}
-              style={{ borderRadius: "50%" }}
+              fill
+              style={{
+                objectFit: "cover",
+                borderRadius: "50%",
+                objectPosition: "center 10%", // shifts image down inside the frame
+              }}
+              sizes="180px"
             />
-          </Avatar>
+          </Box>
           <Typography variant="caption" sx={{ mb: 2 }}>
             <i>All rights reserved</i>
           </Typography>
