@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Box, IconButton, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
+import { formatDate } from "@/src/app/blog/page";
 
 const postKeywordIsValid = (keyword: string) => {
   const validKeywords = posts.map((project) => project.keyword);
@@ -71,10 +72,18 @@ export default function DynamicPostPage({
         >
           <ArrowBackIcon />
         </IconButton>
-        <Typography variant="h5" component="h5" sx={{ margin: 0 }}>
+        <Typography variant="h5" component="h2" sx={{ margin: 0 }}>
           {post.title}
         </Typography>
       </Box>
+      <Typography
+        variant="caption"
+        color="text.secondary"
+        display="block"
+        gutterBottom
+      >
+        {formatDate(post.date)}
+      </Typography>
       <PostContent />
     </Box>
   );

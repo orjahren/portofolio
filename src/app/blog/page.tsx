@@ -9,7 +9,7 @@ import {
   Stack,
 } from "@mui/material";
 
-const formatDate = (date: Date) => date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+export const formatDate = (date: Date) => date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
 
 const BlogpostsOverview = () => {
   return (
