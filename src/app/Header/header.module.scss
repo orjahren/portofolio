@@ -1,8 +1,13 @@
 @import "@/src/styles/variables";
 
 .header {
-  width: 100%;
+  width: 100vw; // Ensure header spans the viewport width
+  max-width: 100%; // Prevent overflow
+  box-sizing: border-box; // Include padding/border in width
   position: relative;
   display: flex;
   justify-content: space-evenly;
+  align-items: center; // Vertically center items
+  overflow-x: hidden; // Prevent horizontal overflow
+  padding: 0; // Remove extra padding if present
 }
