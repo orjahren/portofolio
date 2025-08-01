@@ -22,6 +22,7 @@ const navLinks: ReadonlyArray<{ href: string; label: string }> = [
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const Header = () => {
