@@ -12,8 +12,8 @@ const projects: ReadonlyArray<ProjectType> = [
   {
     title: "Summer dashboard",
     keyword: "summer-dashboard",
-    blurb: "A web service for creating and managing summer bucketslists.",
-    description: "A web service for creating and managing summer bucketslists.",
+    blurb: "A web service for creating and managing summer bucket lists.",
+    description: "A web service for creating and managing summer bucket lists.",
     localLink: "/projects/summer-dashboard",
     externalLink: "https://github.com/orjahren/summer-dashboard",
   },
