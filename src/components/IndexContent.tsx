@@ -2,7 +2,7 @@ import {
   Box,
   Typography,
   Link,
-  Grid,
+  GridLegacy, // TODO: Migrate to Grid from @mui/material
   Avatar,
   List,
   ListItem,
@@ -31,15 +31,17 @@ const IndexContent = () => (
       elevation={3}
       sx={{ p: { xs: 2, md: 4 }, maxWidth: 900, mx: "auto" }}
     >
-      <Grid container spacing={4} alignItems="center">
-        <Grid>
+      <GridLegacy container spacing={2} alignItems="center">
+        <GridLegacy item xs={12} md={8}>
           <Typography variant="h3" component="h1" gutterBottom>
             Oliver Jahren
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
             <AccountCircleIcon fontSize="small" sx={{ mr: 1 }} />
-            oliverrj@ifi.uio.no
-          </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 0 }}>
+              oliverrj@ifi.uio.no
+            </Typography>
+          </Box>
           <Typography variant="body1" sx={{ mb: 2 }}>
             I am studying for a{" "}
             <Link
@@ -78,12 +80,31 @@ const IndexContent = () => (
             </Link>
             .
           </Typography>
-        </Grid>
-        <Grid
+          <List sx={{ mt: 2 }}>
+            {linkPairs.map(([name, url, icon]) => (
+              <ListItem key={url} disablePadding>
+                <ListItemIcon sx={{ minWidth: 36 }}>{icon}</ListItemIcon>
+                <Link
+                  href={url}
+                  target="_blank"
+                  rel="noopener"
+                  underline="hover"
+                >
+                  <ListItemText primary={name} />
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </GridLegacy>
+        <GridLegacy
+          item
+          xs={12}
+          md={4}
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            justifyContent: { md: "flex-start", xs: "center" },
           }}
         >
           <Box
@@ -104,7 +125,7 @@ const IndexContent = () => (
               style={{
                 objectFit: "cover",
                 borderRadius: "50%",
-                objectPosition: "center 10%", // shifts image down inside the frame
+                objectPosition: "center 10%",
               }}
               sizes="180px"
             />
@@ -112,23 +133,8 @@ const IndexContent = () => (
           <Typography variant="caption" sx={{ mb: 2 }}>
             <i>All rights reserved</i>
           </Typography>
-          <List>
-            {linkPairs.map(([name, url, icon]) => (
-              <ListItem key={url} disablePadding>
-                <ListItemIcon sx={{ minWidth: 36 }}>{icon}</ListItemIcon>
-                <Link
-                  href={url}
-                  target="_blank"
-                  rel="noopener"
-                  underline="hover"
-                >
-                  <ListItemText primary={name} />
-                </Link>
-              </ListItem>
-            ))}
-          </List>
-        </Grid>
-      </Grid>
+        </GridLegacy>
+      </GridLegacy>
     </Paper>
   </Box>
 );
