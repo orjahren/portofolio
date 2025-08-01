@@ -1,11 +1,13 @@
 "use client";
 import Card from "@mui/material/Card";
 
-import style from "./index.module.scss";
+import style from "./projects.module.scss";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+
+import projects from "@/src/data/projects";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   const [open, setOpen] = useState(false);
@@ -39,14 +41,19 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           >
             {project.blurb}
             <br />
+          </Typography>
+          <div className={style.modalLinks}>
+            <a href={project.localLink} rel="noopener noreferrer">
+              Read more
+            </a>
             <a
-              href={project.localLink || project.externalLink}
+              href={project.externalLink}
               target="_blank"
               rel="noopener noreferrer"
             >
               Go to project
             </a>
-          </Typography>
+          </div>
         </Box>
       </Modal>
     </>
@@ -54,24 +61,6 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 };
 
 const ProjectShowcase = () => {
-  const projects: ReadonlyArray<ProjectType> = [
-    {
-      title: "Nostalgeez",
-      blurb:
-        "A platform for finding when you added what songs to what playlists.",
-      description:
-        "A platform for finding when you added what songs to what playlists.",
-      externalLink: "https://github.com/orjahren/nostalgeez",
-    },
-    {
-      title: "Summer dashboard",
-      blurb: "A web service for creating and managing summer bucketslists.",
-      description:
-        "A web service for creating and managing summer bucketslists.",
-      externalLink: "https://github.com/orjahren/summer-dashboard",
-    },
-  ];
-
   return (
     <div className={style.projectShowcase}>
       <p>Some side projects</p>

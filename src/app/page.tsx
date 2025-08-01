@@ -2,7 +2,7 @@ import Footer from "@/src/app/Footer";
 import Header from "@/src/app/Header";
 
 import IndexContent from "@/src/components/IndexContent";
-import ProjectShowcase from "@/src/components/ProjectShowcase";
+import ProjectShowcase from "@/src/components/projects/ProjectShowcase";
 
 export default () => (
   <>
