@@ -19,9 +19,9 @@ import { useState } from "react";
 
 const navLinks: ReadonlyArray<{ href: string; label: string }> = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/projects", label: "Projects" }, TODO: Add projects page
+  //{ href: "/about", label: "About" }, TODO: Add about page
+  //{ href: "/contact", label: "Contact" }, TODO: Add contact page
   { href: "/blog", label: "Blog" },
 ];
 
