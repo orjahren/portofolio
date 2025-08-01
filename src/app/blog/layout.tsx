@@ -8,6 +8,7 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
       flexDirection="column"
       alignItems="center"
       bgcolor="#fafafa"
+      sx={{ overflowX: "hidden" }} // Prevent horizontal scroll
     >
       <Box component="header" width="100%" textAlign="center" py={4}>
         <Typography variant="h3" component="h1">
@@ -25,6 +26,8 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
           py: 4,
           px: { xs: 2, md: 4 },
           my: 2,
+          width: "100%", // Ensure container doesn't overflow
+          boxSizing: "border-box", // Include padding in width
         }}
       >
         {children}
