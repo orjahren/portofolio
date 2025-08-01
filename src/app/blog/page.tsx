@@ -9,6 +9,16 @@ import {
   Stack,
 } from "@mui/material";
 
+export async function generateMetadata(): Promise<{
+  title: string;
+  description: string;
+}> {
+  return {
+    title: "Blog Overview",
+    description: "Overview of blog posts.",
+  };
+}
+
 const formatDate = (date: Date) => date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
 
 const BlogpostsOverview = () => {
