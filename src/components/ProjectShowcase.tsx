@@ -54,7 +54,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 };
 
 const ProjectShowcase = () => {
-  const projects: ProjectType[] = [
+  const projects: ReadonlyArray<ProjectType> = [
     {
       title: "Nostalgeez",
       blurb:
@@ -70,7 +70,7 @@ const ProjectShowcase = () => {
         "A web service for creating and managing summer bucketslists.",
       externalLink: "https://github.com/orjahren/summer-dashboard",
     },
-  ] as const;
+  ];
 
   return (
     <div className={style.projectShowcase}>
