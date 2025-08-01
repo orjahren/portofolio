@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Box, IconButton, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { formatDate } from "@/src/app/blog/page";
+
+const formatDate = (date: Date) => date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
 
 const postKeywordIsValid = (keyword: string) => {
   const validKeywords = posts.map((project) => project.keyword);
