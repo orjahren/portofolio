@@ -11,14 +11,10 @@ spare time (see [issues](https://github.com/orjahren/portofolio/issues)).
 
 It is a very basic Nextjs app.
 
-It technically has Tailwind and Postcss as dependencies, but I don't currently
-take real advantage of any of their features.
-
 - Nextjs
   - React
   - App router
-- Tailwind
-  - Postcss
+- Sass
 - Vercel
   - Hosting
   - Building
