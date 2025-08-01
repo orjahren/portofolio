@@ -1,21 +1,31 @@
 import style from "./footer.module.scss";
+import { Box, Typography, Link, Divider } from "@mui/material";
 
 const Footer = ({ githubRepoUrl }: { githubRepoUrl: string }) => (
-  <footer className={style.footer}>
-    <div>
-      <p>
-        <a href="/">Home</a> | <a href="/projects">Projects</a> |{" "}
-        <a href="/about">About</a> | <a href="/contact">Contact</a>
-      </p>
+  <>
+    <Divider sx={{ mb: 2 }} />
+    <div className={style.footerContainer}>
+      <Box component="footer" py={0} px={0}>
+        <Box mt={0} textAlign="center">
+          <Typography variant="body2" color="text.secondary">
+            🚀 Made with coffee in Norway, 2023-25.{" "}
+            <Link
+              href={githubRepoUrl}
+              target="_blank"
+              rel="noopener"
+              underline="hover"
+            >
+              Source code on Github
+            </Link>
+            . 🦮
+          </Typography>
+          <Typography variant="caption" color="text.secondary">
+            0372 Oslo.
+          </Typography>
+        </Box>
+      </Box>
     </div>
-    <div>
-      <p>
-        🚀 Made with coffee in Norway, 2023-25.{" "}
-        <a href={githubRepoUrl}>Source code on Github</a>. 🦮
-      </p>
-      <p>0372 Oslo.</p>
-    </div>
-  </footer>
+  </>
 );
 
 export default Footer;

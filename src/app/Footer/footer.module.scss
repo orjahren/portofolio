@@ -1,11 +1,18 @@
-.footer {
+@import "@/src/styles/variables";
+
+.footerContainer {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: block;
   div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: $color-footer-gradient;
   }
+  * p {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    color: $color-text;
+    padding: 0.5rem;
+  }
+
+  background: $color-footer-gradient;
+  color: $color-content-bg;
 }
