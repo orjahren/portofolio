@@ -1,4 +1,4 @@
-import posts from "@/src/data/blog/posts";
+import sitemap from "@/src/app/sitemap";
 
 import {
   Box,
@@ -21,12 +21,49 @@ export async function generateMetadata(): Promise<{
 
 const formatDate = (date: Date) => date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
 
-const BlogpostsOverview = () => {
+const getPostMetadata = async (slug: string) => {
+  const mdx = await import(`./${slug}/page.mdx`);
+  return mdx.metadata;
+};
+
+const BlogpostsOverview = async () => {
+  // TODO: Wack navn
+  const siteMap = await sitemap();
+
+  const posts = await Promise.all(
+    siteMap
+      .filter((item) => item.url.includes("/blog/"))
+      .map(async (post) => {
+        const slug = post.url.split("/").pop() || "default";
+        const metadata = await getPostMetadata(slug);
+
+        return {
+          title: metadata.title || "Untitled",
+          date: new Date(metadata.date),
+          keyword: slug,
+          blurb: metadata.blurb,
+          description: metadata.description,
+          link: post.url,
+        };
+      })
+  );
+
+  if (!posts.length) {
+    return (
+      <Typography variant="body1" color="text.secondary">
+        No blog posts available.
+      </Typography>
+    );
+  }
+
+  // Sort posts by date, newest first
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <Box>
       <Stack spacing={3}>
         {posts
-          .filter((post) => !post.hidden)
+          .filter((post) => post)
           .map((post) => (
             <Card key={post.keyword} variant="outlined">
               <CardContent>
