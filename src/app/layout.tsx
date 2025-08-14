@@ -7,7 +7,19 @@ import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Oliver Jahren",
+  metadataBase: new URL("https://rustejahren.no"),
+  alternates: {
+    canonical: "/",
+  },
+  title: { default: "Oliver Jahren", template: "%s | Oliver Jahren" },
+  keywords: [
+    "Oliver Jahren",
+    "Portfolio",
+    "Web Developer",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Oliver Jahren", url: "https://rustejahren.no" }],
+  creator: "Oliver Jahren",
   description: "Oliver Jahren's personal website",
 };
 
