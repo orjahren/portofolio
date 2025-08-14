@@ -1,20 +1,21 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Button, Box } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const GoBackButton = () => {
-  const router = useRouter();
   return (
     <Box sx={{ mb: 2, display: "flex", alignItems: "center" }}>
       <Button
         variant="outlined"
         color="primary"
-        onClick={() => router.back()}
+        component={Link}
+        href="/blog"
         size="small"
         startIcon={<ArrowBackIcon />}
         sx={{ textTransform: "none", fontWeight: 500 }}
+        aria-label="Go back to blog overview"
       >
         Go back
       </Button>
