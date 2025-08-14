@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 
 const BlogLayout = ({ children }: { children: React.ReactNode }) => {
+  const currentYear = new Date().getFullYear();
   return (
     <Box
       minHeight="100vh"
@@ -40,7 +41,7 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
         color="#888"
       >
         <Typography variant="body2">
-          © 2025 Oliver Jahren. All rights reserved.
+          © {currentYear} Oliver Jahren. All rights reserved.
         </Typography>
       </Box>
     </Box>
