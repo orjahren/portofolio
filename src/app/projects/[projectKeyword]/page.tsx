@@ -1,6 +1,6 @@
 "use client";
 
-import projects from "@/src/data/projects";
+import projects from "@/src/app/projects/projects";
 import { use } from "react";
 
 const projectKeywordIsValid = (keyword: string) => {

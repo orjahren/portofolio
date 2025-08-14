@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import style from "./projects.module.scss";
 
-import projects from "@/src/data/projects";
+import projects from "@/src/app/projects/projects";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (

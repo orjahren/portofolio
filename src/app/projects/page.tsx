@@ -1,4 +1,4 @@
-import ProjectShowcase from "@/src/components/projects/ProjectShowcase";
+import ProjectShowcase from "@/src/app/projects/ProjectShowcase";
 
 const ProjectsPage = () => {
   return (
