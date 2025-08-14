@@ -1,10 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-const isProd = process.env.NODE_ENV === "production";
-
-const SITE_URL = isProd ? "https://rustejahren.no" : "http://localhost:3000";
-
 async function getNoteSlugs(dir: string) {
   const entries = await fs.readdir(dir, {
     recursive: true,
@@ -27,7 +23,7 @@ export default async function sitemap() {
   const slugs = await getNoteSlugs(blogDirectory);
 
   return slugs.map((slug) => ({
-    url: `${SITE_URL}/blog/${slug}`,
+    url: `/blog/${slug}`,
     lastModified: new Date().toISOString(),
   }));
 }
